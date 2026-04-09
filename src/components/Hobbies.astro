@@ -1,0 +1,33 @@
+---
+const items = [
+  {
+    label: 'Traveling',
+    detail: 'Snowboarding, wakeboarding, hydrofoil, SCUBA & snorkeling',
+  },
+  {
+    label: 'Home Lab',
+    detail: 'Self-hosting apps, networks, and servers for automation and home improvement',
+  },
+  {
+    label: 'Culinary',
+    detail: 'Bread baking and pizza making',
+  },
+];
+---
+
+<section id="hobbies" class="py-20 px-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-xs font-semibold tracking-widest uppercase text-[#22d3ee] mb-10">
+      Outside of Work
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      {items.map((item) => (
+        <div class="p-5 border border-[#1a1a1a] rounded bg-[#0d0d0d] hover:border-[#333] transition-colors">
+          <h3 class="text-[#f0f0f0] font-semibold text-sm mb-2">{item.label}</h3>
+          <p class="text-[#555] text-xs leading-relaxed">{item.detail}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

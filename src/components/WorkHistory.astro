@@ -1,0 +1,97 @@
+---
+const jobs = [
+  {
+    role: 'Manager, Strategic Accounts Sales Engineering',
+    company: 'New Relic',
+    period: 'Apr 2024 — Present',
+    location: 'Greater Chicago Area, IL',
+    bullets: [
+      'Responsible for $125M in Annual Contract Revenue across strategic accounts',
+      'Lead the most experienced Solutions Architect team to grow revenue and consumption',
+      'Develop tailored sales strategies for complex enterprise customers',
+    ],
+  },
+  {
+    role: 'Manager, Global Accounts Customer Adoption',
+    company: 'New Relic',
+    period: 'Oct 2022 — Apr 2024',
+    location: 'Greater Chicago Area, IL',
+    bullets: [
+      'Led pre-sales and post-sales teams across $70M+ in Consumption Run Rate Revenue',
+      'Completed full pricing conversion from subscription to consumption with zero churn',
+      'Maintained zero attrition across the team through radical organizational changes',
+    ],
+  },
+  {
+    role: 'Senior Solution Architect (Pre-Sales)',
+    company: 'New Relic',
+    period: 'Jul 2016 — Oct 2022',
+    location: 'San Francisco, CA / Chicago, IL',
+    bullets: [
+      'Grew ARR over 300% for key accounts — from mid-market to multi-million dollar contracts',
+      'Named Key Accounts Sales MVP (Q3\'18, FY18) and President\'s Club (FY20)',
+      'Architected modern cloud/container solutions across AWS, Azure, GCP, and Kubernetes',
+    ],
+  },
+  {
+    role: 'Senior SE',
+    company: 'AirWatch / VMware',
+    period: 'Sep 2014 — Jun 2016',
+    location: 'Palo Alto, CA',
+    bullets: [
+      'Landed 3 of the largest deals in AirWatch history',
+      'Built and maintained relationships with mobile device and services partners',
+    ],
+  },
+  {
+    role: 'Principal Pre-Sales Technical Consultant',
+    company: 'Nimsoft / CA Technologies',
+    period: 'Oct 2010 — Aug 2014',
+    location: 'London / Slough, UK',
+    bullets: [
+      'Drove record-breaking sales quarters across growth markets in the UK',
+      'Enabled channel partners and trained new colleagues on technical and business value',
+    ],
+  },
+];
+---
+
+<section id="work" class="py-20 px-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-xs font-semibold tracking-widest uppercase text-[#22d3ee] mb-10">
+      Work History
+    </h2>
+
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-0 top-2 bottom-2 w-px bg-[#222]"></div>
+
+      <div class="space-y-10">
+        {jobs.map((job) => (
+          <div class="pl-8 relative">
+            <!-- Timeline dot -->
+            <div class="absolute left-[-4px] top-[6px] w-2 h-2 rounded-full bg-[#333] border border-[#555]"></div>
+
+            <div>
+              <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
+                <h3 class="text-[#f0f0f0] font-semibold">{job.role}</h3>
+                <span class="text-[#22d3ee] text-sm font-medium">{job.company}</span>
+              </div>
+              <p class="text-[#555] text-xs tracking-wide mb-3">
+                {job.period} &nbsp;·&nbsp; {job.location}
+              </p>
+              <ul class="space-y-1.5">
+                {job.bullets.map((b) => (
+                  <li class="text-[#888] text-sm leading-relaxed flex gap-2">
+                    <span class="text-[#333] mt-1.5 flex-shrink-0">—</span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

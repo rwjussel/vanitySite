@@ -1,0 +1,257 @@
+---
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ryan Jussel — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 13px;
+        line-height: 1.6;
+        color: #f0f0f0;
+        background: #0a0a0a;
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .print-btn {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background: #22d3ee;
+        color: #0a0a0a;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: #888;
+        text-decoration: none;
+        font-size: 12px;
+      }
+
+      .back-link:hover { color: #22d3ee; }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #f0f0f0;
+        margin-bottom: 4px;
+      }
+
+      .contact {
+        color: #888;
+        font-size: 12px;
+        margin-bottom: 24px;
+      }
+
+      .contact a { color: #22d3ee; text-decoration: none; }
+
+      hr { border: none; border-top: 1px solid #222; margin: 20px 0; }
+
+      h2 {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #22d3ee;
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #f0f0f0;
+        margin-bottom: 2px;
+      }
+
+      .job-meta {
+        color: #555;
+        font-size: 11px;
+        margin-bottom: 8px;
+      }
+
+      .job-meta .company { color: #22d3ee; }
+
+      ul { list-style: none; }
+
+      ul li {
+        color: #888;
+        font-size: 12px;
+        padding-left: 12px;
+        position: relative;
+        margin-bottom: 3px;
+      }
+
+      ul li::before {
+        content: '—';
+        position: absolute;
+        left: 0;
+        color: #333;
+      }
+
+      .job { margin-bottom: 18px; }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .skill-tag {
+        display: inline-block;
+        border: 1px solid #333;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 11px;
+        color: #888;
+        margin: 2px;
+      }
+
+      @media print {
+        body {
+          background: white;
+          color: #111;
+          padding: 1.5cm 2cm;
+        }
+
+        .print-btn, .back-link { display: none; }
+
+        h1 { color: #111; }
+        h2 { color: #0a7c94; }
+        h3 { color: #111; }
+        .contact { color: #555; }
+        .contact a { color: #0a7c94; }
+        hr { border-top-color: #ddd; }
+        .job-meta { color: #777; }
+        .job-meta .company { color: #0a7c94; }
+        ul li { color: #444; }
+        ul li::before { color: #bbb; }
+        .skill-tag { color: #444; border-color: #ccc; }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+    <a href="/" class="back-link">← ryanjussel.com</a>
+
+    <h1>Ryan Jussel</h1>
+    <p class="contact">
+      Greater Chicago Area, IL &nbsp;·&nbsp;
+      <a href="mailto:ryan.jussel@gmail.com">ryan.jussel@gmail.com</a> &nbsp;·&nbsp;
+      (650) 416-1212
+    </p>
+
+    <hr />
+
+    <h2>Objective</h2>
+    <p style="color:#888;font-size:12px;line-height:1.7;margin-bottom:20px;">
+      Problem solver, connection maker, and passionate technologist seeking to contribute expertise in large enterprise solution sales, data management, analytics, and Generative AI. I leverage leadership experience, technical acumen, and a solution-oriented approach to craft innovative go-to-market strategies that align with customer value — leading, winning, and growing customers in both maturity and revenue.
+    </p>
+
+    <hr />
+
+    <h2>Employment History</h2>
+
+    <div class="job">
+      <h3>Manager, Strategic Accounts Sales Engineering</h3>
+      <p class="job-meta"><span class="company">New Relic</span> &nbsp;·&nbsp; Apr 2024 — Present &nbsp;·&nbsp; Greater Chicago Area, IL</p>
+      <ul>
+        <li>Directly responsible for $125M in Annual Contract Revenue across the strategic account territory</li>
+        <li>Lead the most experienced Solutions Architect team to grow revenue and consumption</li>
+        <li>Develop and implement unique sales strategies tailored to complex customer needs</li>
+        <li>Collaborate with Product and Marketing teams to drive new functionality and partnerships</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Manager, Global Accounts Customer Adoption</h3>
+      <p class="job-meta"><span class="company">New Relic</span> &nbsp;·&nbsp; Oct 2022 — Apr 2024 &nbsp;·&nbsp; Greater Chicago Area, IL</p>
+      <ul>
+        <li>Directly responsible for $70M+ in Consumption Run Rate Revenue across Global Accounts</li>
+        <li>Completed full conversion from subscription to consumption pricing with zero churn</li>
+        <li>Maintained zero attrition through radical organizational changes</li>
+        <li>Hired and developed several individuals who became high performers</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Senior Solution Architect (Pre-Sales)</h3>
+      <p class="job-meta"><span class="company">New Relic</span> &nbsp;·&nbsp; Jul 2016 — Oct 2022 &nbsp;·&nbsp; San Francisco, CA / Chicago, IL</p>
+      <ul>
+        <li>Grew ARR over 300% for key accounts — from mid-market to multi-million dollar contracts</li>
+        <li>Named Key Accounts Sales MVP (Q3'18, FY18); President's Club (FY20)</li>
+        <li>Architected cloud/container solutions across AWS, Azure, GCP, Kubernetes</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Senior SE</h3>
+      <p class="job-meta"><span class="company">AirWatch / VMware</span> &nbsp;·&nbsp; Sep 2014 — Jun 2016 &nbsp;·&nbsp; Palo Alto, CA</p>
+      <ul>
+        <li>Landed 3 of the largest deals in AirWatch history</li>
+        <li>Built and maintained mobile device and services partner relationships</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Principal Pre-Sales Technical Consultant</h3>
+      <p class="job-meta"><span class="company">Nimsoft / CA Technologies</span> &nbsp;·&nbsp; Oct 2010 — Aug 2014 &nbsp;·&nbsp; London / Slough, UK</p>
+      <ul>
+        <li>Drove record-breaking sales quarters in growth markets across the UK</li>
+        <li>Enabled channel partners and trained new colleagues on technical and business value</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <h2>Education</h2>
+    <p style="color:#888;font-size:12px;margin-bottom:20px;">
+      <strong style="color:#f0f0f0;">Colorado State University</strong> &nbsp;·&nbsp; Fort Collins, CO<br />
+      BS Business Administration, Computer Information Systems &nbsp;·&nbsp; May 2005
+    </p>
+
+    <hr />
+
+    <h2>Technical Skills</h2>
+    <div class="skills-grid" style="margin-bottom:20px;">
+      <div>
+        <p style="color:#f0f0f0;font-size:12px;font-weight:600;margin-bottom:6px;">Core Competencies</p>
+        <span class="skill-tag">Executive Engagement</span>
+        <span class="skill-tag">Team Leadership</span>
+        <span class="skill-tag">Sales Strategy</span>
+        <span class="skill-tag">Technical Coaching</span>
+        <span class="skill-tag">Prioritization</span>
+      </div>
+      <div>
+        <p style="color:#f0f0f0;font-size:12px;font-weight:600;margin-bottom:6px;">Technical</p>
+        <span class="skill-tag">AWS (Certified CCP)</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Kubernetes</span>
+        <span class="skill-tag">VMware</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL / MySQL</span>
+        <span class="skill-tag">MongoDB</span>
+      </div>
+    </div>
+  </body>
+</html>

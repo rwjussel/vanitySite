@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import WorkHistory from '../components/WorkHistory.astro';
+import Skills from '../components/Skills.astro';
+import Hobbies from '../components/Hobbies.astro';
+---
+
+<Layout>
+  <Nav />
+  <main>
+    <Hero />
+    <div class="max-w-3xl mx-auto px-6">
+      <hr class="border-[#1a1a1a]" />
+    </div>
+    <WorkHistory />
+    <Hobbies />
+    <Skills />
+  </main>
+
+  <footer class="py-12 px-6 border-t border-[#1a1a1a]">
+    <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-[#333] text-xs">
+        Ryan Jussel &nbsp;·&nbsp; Greater Chicago Area, IL
+      </p>
+      <div class="flex items-center gap-4 text-xs text-[#444]">
+        <a href="mailto:ryan.jussel@gmail.com" class="hover:text-[#22d3ee] transition-colors">
+          ryan.jussel@gmail.com
+        </a>
+        <span>·</span>
+        <a href="https://linkedin.com/in/ryanjussel" class="hover:text-[#22d3ee] transition-colors" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        <span>·</span>
+        <a href="/cv" class="hover:text-[#22d3ee] transition-colors">
+          CV
+        </a>
+      </div>
+    </div>
+  </footer>
+</Layout>

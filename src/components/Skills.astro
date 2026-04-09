@@ -1,0 +1,63 @@
+---
+const core = [
+  'Executive Engagement',
+  'Team Leadership',
+  'Sales Strategy',
+  'Technical Coaching',
+  'Prioritization',
+  'Pipeline Development',
+];
+
+const technical = [
+  'AWS (Certified CCP)',
+  'Docker',
+  'Kubernetes',
+  'VMware',
+  'React',
+  'Node.js',
+  'Python',
+  'Java',
+  'SQL / MySQL',
+  'MongoDB',
+  'Cloud Infrastructure',
+  'Observability / APM',
+];
+---
+
+<section id="skills" class="py-20 px-6 bg-[#0d0d0d]">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-xs font-semibold tracking-widest uppercase text-[#22d3ee] mb-10">
+      Skills
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <h3 class="text-[#f0f0f0] text-sm font-semibold mb-4 tracking-wide">Core Competencies</h3>
+        <div class="flex flex-wrap gap-2">
+          {core.map((skill) => (
+            <span class="px-3 py-1.5 text-xs text-[#f0f0f0] border border-[#333] rounded bg-[#111] hover:border-[#22d3ee] hover:text-[#22d3ee] transition-colors cursor-default">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-[#f0f0f0] text-sm font-semibold mb-4 tracking-wide">Technical</h3>
+        <div class="flex flex-wrap gap-2">
+          {technical.map((skill) => (
+            <span class="px-3 py-1.5 text-xs text-[#888] border border-[#222] rounded bg-[#111] hover:border-[#22d3ee] hover:text-[#22d3ee] transition-colors cursor-default font-mono">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-8 border-t border-[#1a1a1a]">
+      <p class="text-xs text-[#444] tracking-wide">
+        BS Business Administration, Computer Information Systems &nbsp;·&nbsp; Colorado State University &nbsp;·&nbsp; 2005
+      </p>
+    </div>
+  </div>
+</section>
