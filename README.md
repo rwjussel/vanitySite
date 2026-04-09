@@ -1,43 +1,79 @@
-# Astro Starter Kit: Minimal
+# ryanjussel.com
+
+Personal vanity site and CV for Ryan Jussel — built with [Astro](https://astro.build) and Tailwind CSS. Deployed on Netlify.
+
+## Stack
+
+- **Framework**: Astro (static output)
+- **Styling**: Tailwind CSS v4
+- **Hosting**: Netlify
+- **Fonts**: Inter (Google Fonts)
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Hero.astro          # Name, bio, CTA
+│   ├── WorkHistory.astro   # Career timeline
+│   ├── Skills.astro        # Core + technical skills
+│   ├── Hobbies.astro       # Outside of work
+│   └── Nav.astro           # Fixed top nav
+├── layouts/
+│   └── Layout.astro        # HTML shell, meta tags
+├── pages/
+│   ├── index.astro         # Main single-page site
+│   └── cv.astro            # Print-friendly CV (/cv)
+└── styles/
+    └── global.css          # Tailwind import + theme
+cv.md                       # Source of truth for CV content
+netlify.toml                # Build + deploy config
+```
+
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Main site — hero, work history, skills, hobbies |
+| `/cv` | Print-friendly CV with "Save as PDF" button |
+| `/resume` | Redirects to `/cv` |
+
+## Local Development
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev        # http://localhost:4321
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Build & Deploy
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+npm run build      # Outputs to ./dist
+npm run preview    # Preview production build locally
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Netlify deploys automatically on push to `main`. Build settings are defined in `netlify.toml`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Updating Content
 
-Any static assets, like images, can be placed in the `public/` directory.
+All CV content originates from `cv.md`. Component files pull content directly — update the data arrays in each component to reflect changes:
 
-## 🧞 Commands
+- **Bio / headline** → `src/components/Hero.astro`
+- **Work history** → `src/components/WorkHistory.astro`
+- **Skills** → `src/components/Skills.astro`
+- **Hobbies** → `src/components/Hobbies.astro`
+- **CV print page** → `src/pages/cv.astro`
 
-All commands are run from the root of the project, from a terminal:
+## Adding a Headshot
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+A placeholder circle is in `Hero.astro` (line 9). Replace the `<div>` with an `<img>` tag:
 
-## 👀 Want to learn more?
+```astro
+<img
+  src="/headshot.jpg"
+  alt="Ryan Jussel"
+  class="flex-shrink-0 w-20 h-20 rounded-full object-cover border border-[#333]"
+/>
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Drop the image file in `public/headshot.jpg`.
